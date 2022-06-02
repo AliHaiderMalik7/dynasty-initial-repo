@@ -1,14 +1,18 @@
+import React from "react";
 import LoginForm from "./components/LoginForm/LoginForm";
-import SignupForm from "./components/SignupForm";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
+import SignupForm from "./components/SignupForm/SignupForm";
+import Verify from "./components/Verify/Verify";
+import ConfirmationSuccess from "./components/Confirmation/ConfirmationSuccess";
+import ConfirmationError from "./components/Confirmation/ConfirmationError";
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar />
-      <LoginForm />
+      <ConfirmationSuccess />
     </>
   );
-}
+};
 
 export default App;

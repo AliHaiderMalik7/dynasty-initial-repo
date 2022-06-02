@@ -1,15 +1,16 @@
 import React from "react";
-import { Row, Col, Button, Checkbox, Form, Input, Typography } from "antd";
-import "./../../styles/form.css";
+import { Button, Checkbox, Form, Input, Typography, Alert } from "antd";
+import ErrorIcon from "./../../assets/erroralert.png";
+import GoogleLogo from "./../../assets/google.png";
 
 const layout = {
   labelCol: { span: 24 },
-  wrapperCol: { span: 18 },
+  wrapperCol: { span: 24 },
 };
 
 const { Title } = Typography;
 
-const SignupForm = () => {
+const LoginForm = () => {
   const onFinish = (values) => {
     console.log("Success:", values);
   };
@@ -18,10 +19,22 @@ const SignupForm = () => {
     console.log("Failed:", errorInfo);
   };
 
+  const errMessage = "There are items that requires your attention";
+
   return (
-    <Row justify="center">
-      <Col xs={24} xl={8}>
-        <Title level={3}>Regester to Dynasty</Title>
+    // <Row justify="center">
+    <div className="card-class">
+      <div className="title-class">Login to Dynasty</div>
+      <div className="alert-class">
+        <Alert
+          message={errMessage}
+          type="error"
+          showIcon
+          icon={<img src={ErrorIcon} className="error-icon" />}
+          style={{ textAlign: "center" }}
+        />
+      </div>
+      <div className="form-class">
         <Form
           name="basic"
           initialValues={{
@@ -55,27 +68,16 @@ const SignupForm = () => {
               },
             ]}
           >
-            <Input.Password />
+            <Input />
           </Form.Item>
 
           <Form.Item
-            label="Confirm Password"
-            name="confirmpassword"
-            rules={[
-              {
-                required: true,
-                message: "Please re enter your password!",
-              },
-            ]}
+            name="remember"
+            valuePropName="checked"
+            className="inline-class"
           >
-            <Input.Password />
-          </Form.Item>
-
-          <Form.Item name="remember" valuePropName="checked">
             <Checkbox>Remember me</Checkbox>
-            <a href="#" style={{ float: "right" }}>
-              Forgot Password
-            </a>
+            <span className="forgot-password">Forgot Password?</span>
           </Form.Item>
 
           <Form.Item>
@@ -84,9 +86,17 @@ const SignupForm = () => {
             </Button>
           </Form.Item>
         </Form>
-      </Col>
-    </Row>
+        <div id="header">
+          <h3>or sign up with</h3>
+        </div>
+        <a className="btn-google">
+          <img src={GoogleLogo} style={{ height: "24px", width: "24px" }} />
+          Google
+        </a>
+      </div>
+    </div>
+    // </Row>
   );
 };
 
-export default SignupForm;
+export default LoginForm;

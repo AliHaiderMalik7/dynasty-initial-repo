@@ -1,12 +1,11 @@
-import { useState } from "react";
-import "./../../styles/navbar.css";
+import React, { useState } from "react";
 import Logo from "./../../assets/logo.svg";
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
-    <nav className="navigation">
+    <div className="navigation">
       <a href="/" className="brand-name">
         <img className="brand-name" src={Logo} />
         Dynasty
@@ -54,6 +53,6 @@ export default function Navbar() {
         <button className="log-out">Logout</button>
         <button className="sign-up">Signup</button>
       </div>
-    </nav>
+    </div>
   );
 }
