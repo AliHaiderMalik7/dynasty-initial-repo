@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./../../assets/logo.svg";
 
 export default function Navbar() {
@@ -36,22 +37,26 @@ export default function Navbar() {
       >
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <a href="#">Services</a>
+            <Link to="/">Services</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/">Contact</Link>
           </li>
         </ul>
       </div>
       <div className="log-btns">
-        <button className="log-out">Logout</button>
-        <button className="sign-up">Signup</button>
+        <Link to="login">
+          <button className="log-out">Logout</button>
+        </Link>
+        <Link to="regester">
+          <button className="sign-up">Signup</button>
+        </Link>
       </div>
     </div>
   );
