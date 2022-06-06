@@ -9,24 +9,24 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 const App = () => {
   return (
-    <Routes>
-      <Route exact path="/" element={<Navbar />}>
-        <Route exact path="login" element={<LoginForm />} />
-        <Route exact path="login/error" element={<ConfirmationError />} />
-        <Route exact path="regester" element={<SignupForm />} />
-        <Route exact path="regester/verify" element={<Verify />} />
-        <Route
-          exact
-          path="regester/success"
-          element={<ConfirmationSuccess />}
-        />
-        <Route exact path="*" element={<Navigate to="/" />} />
-      </Route>
-    </Routes>
-    //  <>
-    //    <Navbar />
-    //    <LoginForm />
-    //  </>
+    // <Routes>
+    //   <Route exact path="/" element={<Navbar />}>
+    //     <Route exact path="login" element={<LoginForm />} />
+    //     <Route exact path="login/error" element={<ConfirmationError />} />
+    //     <Route exact path="regester" element={<SignupForm />} />
+    //     <Route exact path="regester/verify" element={<Verify />} />
+    //     <Route
+    //       exact
+    //       path="regester/success"
+    //       element={<ConfirmationSuccess />}
+    //     />
+    //     <Route exact path="*" element={<Navigate to="/" />} />
+    //   </Route>
+    // </Routes>
+    <>
+      <Navbar />
+      <ConfirmationSuccess />
+    </>
   );
 };
 
