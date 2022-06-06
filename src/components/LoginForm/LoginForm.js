@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Checkbox, Form, Input, Typography, Alert } from "antd";
 import ErrorIcon from "./../../assets/erroralert.png";
 import GoogleLogo from "./../../assets/google.png";
+import "./loginform.css";
 
 const layout = {
   labelCol: { span: 24 },

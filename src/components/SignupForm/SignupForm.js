@@ -3,6 +3,7 @@ import { Row, Col, Button, Checkbox, Form, Input, Typography } from "antd";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { PasswordInput } from "antd-password-input-strength";
 import GoogleLogo from "./../../assets/google.png";
+import "./form.css";
 
 const layout = {
   labelCol: { span: 24 },

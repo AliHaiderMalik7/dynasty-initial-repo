@@ -2,6 +2,7 @@ import { Button } from "antd";
 import React from "react";
 import PhoneValidation from "./PhoneInout";
 import GoogleLogo from "./../../assets/googlelogo.png";
+import "./verify.css";
 
 const Verify = () => {
   return (

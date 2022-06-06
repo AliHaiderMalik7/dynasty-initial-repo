@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
+import "./confirmation.css";
 
 const ConfirmationError = () => {
   return (
