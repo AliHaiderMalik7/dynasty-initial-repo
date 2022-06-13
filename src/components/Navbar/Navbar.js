@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="brand-name">
           <Logo />
         </div>
-        <h3 style={{ color: "#303C6C" }}>Dynasty</h3>
+        <h2 style={{ color: "#303C6C" }}>Dynasty</h2>
       </div>
       <button
         className="hamburger"
@@ -32,22 +32,22 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/">Services</Link>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contacts">Contact</Link>
           </li>
           <li className="li-log-btns">
-            {/* <Link to="login"> */}
-            <button className="li-log-out">Logout</button>
-            {/* </Link> */}
+            <Link to="login">
+              <button className="li-log-out">Logout</button>
+            </Link>
 
-            {/* <Link to="regester"> */}
-            <button className="li-sign-up">Signup</button>
-            {/* </Link> */}
+            <Link to="regester">
+              <button className="li-sign-up">Signup</button>
+            </Link>
           </li>
         </ul>
       </div>

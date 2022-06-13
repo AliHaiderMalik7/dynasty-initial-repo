@@ -16,10 +16,30 @@
 }
 .brand-name {
   color: #3d3d3d;
+  display: flex;
+}
+.brand h3 {
+  color: #3d3d3d;
+  font-weight: 500;
+  padding: 0px 0px 0px 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  padding: 0px 0px 0px 8px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .brand-name svg {
-  height: 24.47px;
-  width: 21.24px;
+  height: 29.47px;
+  width: 31.24px;
   color: #fbe8a6;
   background: #303c6c;
 }
@@ -111,6 +131,14 @@
   display: none;
 }
 @media screen and (max-width: 830px) {
+  .brand {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
   .hamburger {
     display: flex;
     justify-content: flex-end;
@@ -171,6 +199,7 @@
     background-color: #fff;
     align-items: center;
   }
+
   .li-log-out {
     width: 100px;
     height: 40px;
